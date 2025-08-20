@@ -271,24 +271,24 @@ export class NgxTouchKeyboardComponent {
       if (button === fnButton.BACKSPACE) {
         if(this._dotPressed){
           output = this._removeAt(output, ...commonParams);                
-          if(output.endsWith('.')){
+          if(output.endsWith('.')){           
             commonParams = [
             this._caretPosition || 0,
             this._caretPositionEnd || 0,
             true,
           ];
-             output = this._removeAt(output, ...commonParams);
+            output = this._removeAt(output, ...commonParams);          
           }
           this._dotPressed = false;         
         }else{
           output = this._removeAt(output, ...commonParams);
-          if(output.endsWith('.')){
-            commonParams = [
+          if(output.endsWith('.')){  
+             commonParams = [
             this._caretPosition || 0,
             this._caretPositionEnd || 0,
             true,
-          ];
-             output = this._removeAt(output, ...commonParams);
+          ];        
+            output = this._removeAt(output, ...commonParams);          
           }
         }            
       }
@@ -319,9 +319,13 @@ export class NgxTouchKeyboardComponent {
     // Handel standard button
     else {
       if(this._dotPressed){
-        output = this._removeAt(output, ...commonParams);
+        output = this._removeAt(output, ...commonParams);      
         output = this._addStringAt(output, button, ...commonParams);
         this._dotPressed = false;
+      }else if(this._activeInputElement?.type == 'number' && this._activeInputElement?.value ==='0'){
+        output = this._removeAt(output, ...commonParams);       
+        output = this._addStringAt(output, button, ...commonParams);
+        this._updateCaretPos(1,true);      
       }else{
         output = this._addStringAt(output, button, ...commonParams);
       }      

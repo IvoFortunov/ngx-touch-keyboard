@@ -1,7 +1,7 @@
 {
-  "name": "ngx-touch-keyboard",
-  "version": "2.5.0",
-  "description": "Virtual Keyboard for Angular applications",
+  "name": "dtx-touch-keyboard",
+  "version": "1.0.1",
+  "description": "Virtual Keyboard for Angular applications with number support",
   "peerDependencies": {
     "@angular/common": ">=14.0.0",
     "@angular/core": ">=14.0.0",
@@ -20,16 +20,16 @@
     "onscreen"
   ],
   "author": {
-    "name": "Mohsen Sohrabi",
-    "url": "https://github.com/mohsen77sk"
+    "name": "Ivailo Fortunov",
+    "url": "https://github.com/ivofortunov"
   },
-  "homepage": "https://github.com/mohsen77sk/angular-touch-keyboard#readme",
+  "homepage": "https://github.com/ivofortunov/ngx-touch-keyboard#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mohsen77sk/angular-touch-keyboard.git"
+    "url": "git+https://github.com/ivofortunov/ngx-touch-keyboard.git"
   },
   "bugs": {
-    "url": "https://github.com/mohsen77sk/angular-touch-keyboard/issues"
+    "url": "https://github.com/ivofortunov/ngx-touch-keyboard/issues"
   },
   "license": "MIT"
 }
